@@ -1,3 +1,4 @@
+import { provideZoneChangeDetection } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,7 +24,7 @@ import { UpdateCameraComponent } from './update-camera/update-camera.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [provideZoneChangeDetection()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

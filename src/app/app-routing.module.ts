@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'camera', pathMatch: 'full' },
+  { path: '', redirectTo: 'cameras', pathMatch: 'full' },
   { path: 'cameras', component: CameraListComponent },
   { path: 'add', component: CreateCameraComponent },
   { path: 'update/:id', component: UpdateCameraComponent },

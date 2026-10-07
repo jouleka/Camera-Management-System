@@ -5,6 +5,7 @@ import { Camera } from '../camera';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-create-camera',
   templateUrl: './create-camera.component.html',
   styleUrls: ['./create-camera.component.css']

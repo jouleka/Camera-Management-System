@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CameraService {
-  [x: string]: any;
 
   private baseUrl = 'http://localhost:8080/api/cameras';
 

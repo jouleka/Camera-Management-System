@@ -35,7 +35,7 @@ public class CameraController {
 
             return new ResponseEntity<>(cameras, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -56,7 +56,7 @@ public class CameraController {
             Camera _camera = cameraRepository.save(camera);
             return new ResponseEntity<>(_camera, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 

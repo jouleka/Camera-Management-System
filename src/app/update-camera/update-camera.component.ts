@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-update-camera',
   templateUrl: './update-camera.component.html',
   styleUrls: ['./update-camera.component.css']
@@ -21,7 +22,7 @@ export class UpdateCameraComponent implements OnInit {
 
       this.id = this.route.snapshot.params['id'];
 
-      this.cameraService.getEmployee(this.id)
+      this.cameraService.getCamera(this.id)
         .subscribe((data: any) => {
           console.log(data)
           this.camera = data;

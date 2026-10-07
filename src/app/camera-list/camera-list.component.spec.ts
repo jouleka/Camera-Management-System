@@ -1,3 +1,4 @@
+import { AppModule } from '../app.module';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CameraListComponent } from './camera-list.component';
@@ -8,7 +9,7 @@ describe('CameraListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CameraListComponent ]
+      imports: [AppModule],
     })
     .compileComponents();
   });

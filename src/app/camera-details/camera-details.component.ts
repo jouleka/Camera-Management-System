@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera } from '../camera';
 
 @Component({
+  standalone: false,
   selector: 'app-camera-details',
   templateUrl: './camera-details.component.html',
   styleUrls: ['./camera-details.component.css']
@@ -18,8 +19,9 @@ export class CameraDetailsComponent implements OnInit {
 
     ngOnInit() {
       this.camera = new Camera();
+      this.id = this.route.snapshot.params['id'];
 
-      this.cameraService.getEmployee(this.id)
+      this.cameraService.getCamera(this.id)
         .subscribe((data: any) => {
           console.log(data)
           this.camera = data;
